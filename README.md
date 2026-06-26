@@ -27,14 +27,14 @@ Docker Desktop **4.79.0** (Windows 11 + WSL2) gets stuck on **"Starting the Dock
 ```bash
 sudo apt remove --purge nvidia-container-toolkit libnvidia-container-tools libnvidia-container1 nvidia-container-toolkit-base
 sudo apt autoremove
-
+---
 2️⃣ Clean daemon.json in WSL
 # Check current config
 sudo cat /etc/docker/daemon.json
 
 # Replace with empty config (or delete the file)
 echo "{}" | sudo tee /etc/docker/daemon.json
-
+---
 3️⃣ Clean daemon.json in Docker Desktop (Windows)
 
 Open Docker Desktop → Settings → Docker Engine.
@@ -52,7 +52,7 @@ Remove all nvidia runtime references:
 Click Apply & Restart.
 or, edit json file with notepad and remove informations about the runtime ...
 save ... note pad step is better, with docker desktop stopped, verify all processus and services of docker are stop, killed !
-
+---
 4️⃣ Restart Docker Desktop
 
 
@@ -65,13 +65,13 @@ Relaunch Docker Desktop.
 ✅ No data loss (containers, volumes, images preserved).
 ✅ Keeps Docker Desktop 4.79.0 (no downgrade needed, no uninstall and reinstall from scratch !).
 ✅ maybe more than 100x faster than Docker Support’s recommended reinstall.
-
+---
 🔍 Why This Works
 
 Docker Desktop 4.79.0 has a bug with GPU runtimes in WSL2.
 The nvidia-container-runtime in daemon.json causes a startup loop if the NVIDIA Toolkit is misconfigured or missing.
 Removing the runtime references forces Docker to use the default runc runtime, avoiding the conflict.
-
+---
 🛡️ Prevention
 
 Avoid mixing NVIDIA Container Toolkit with Docker Desktop 4.79.0 in WSL2.
@@ -88,8 +88,9 @@ Docker Desktop 4.79.0 introduced changes in GPU runtime handling that conflict w
 ❓ How do I check if NVIDIA Container Toolkit is installed?
 bash :
 dpkg -l | grep nvidia
-
+---
 🛠️ Automated Fix Script (Optional theorical script, i did it manually, step by step, not scripted, but... Try to make your script in case you have to face such issue ! OR, do not upgrade quickly to next last versions combination !!!)
+
 If you want to automate the fix, run this script in WSL (Ubuntu-22.04):
 bash
 #!/bin/bash
@@ -103,7 +104,7 @@ echo "📝 Cleaning daemon.json in WSL..."
 echo "{}" | sudo tee /etc/docker/daemon.json
 
 echo "✅ Done! Now clean Docker Desktop's daemon.json in Windows and restart Docker Desktop."
-
+---
 Usage:
 bash
 chmod +x fix-docker-nvidia.sh
@@ -111,7 +112,7 @@ chmod +x fix-docker-nvidia.sh
 or make your own ! I decline any responsability in case of unfortunate problem as I do not know Your config !
 📢 Contributing ,
 You can APPLAUSE :) !
-
+---
 📜 License
 This project is licensed under the MIT License
 
