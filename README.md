@@ -26,6 +26,9 @@
 
 # 🇬🇧 English version
 
+> ⚠️ **Before proceeding, please read the [Disclaimer & Limitation of Liability](DISCLAIMER.md).**
+> This fix is provided "as is", without warranty of any kind. Use at your own risk.
+
 ---
 
 ## 📋 Table of Contents
@@ -362,6 +365,9 @@ MIT License — see [LICENSE](LICENSE)
 ---
 
 # 🇫🇷 Version française
+
+> ⚠️ **Avant de procéder, merci de lire le [Disclaimer & Clause de non-responsabilité](DISCLAIMER.md).**
+> Ce correctif est fourni « en l'état », sans garantie d'aucune sorte. Utilisation à vos propres risques.
 
 ---
 
