@@ -26,7 +26,7 @@
 
 # 🇬🇧 English version
 
-> ⚠️ **Before proceeding, please read the [Disclaimer & Limitation of Liability](DISCLAIMER.md).**
+> ⚠️ **Before proceeding, please read the [Disclaimer & Limitation of Liability].**
 > This fix is provided "as is", without warranty of any kind. Use at your own risk.
 
 ---
