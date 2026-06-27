@@ -1,1 +1,85 @@
+# Post-Restart Recovery Log
 
+## EN — Post-Restart Recovery Log
+
+### Context
+
+After the Docker Desktop daemon was repaired (NVIDIA runtime removed from `daemon.json`), Docker Desktop was restarted. The following issues were observed and resolved.
+
+---
+
+### WordPress (port XXXX)
+
+**Issue**: The WordPress site on port XXXX was not fully responding after the Docker Desktop restart. Some plugins and thumbnails were missing while the full structure and contents were still  in place !
+
+**Remediation**:
+- Restart the database containers first (MariaDB, MySQL).
+- Then restart the WordPress containers in sequence.
+- Plugins and thumbnails were recovered.
+One last thing to do is to reacivate the plugins, to verify the MZERMARTS BackUp's and its files presents, Health state dashboard indications ... Done !
+---
+
+### OpenWebUI & ComfyUI
+
+**Issue**: Models were missing after restart.
+
+**Remediation**:
+- Restart the OpenWebUI container.
+- Restart the ComfyUI container.
+- Models were reloaded and became available again.
+
+All good !
+---
+
+### General Observations
+
+- All containers came back after the restart sequence.
+- No data loss.
+- The fix was successful: the platform is fully operational.
+- The approach was correct: the goal was to restore functionality, and the objective was achieved.
+
+---
+
+## FR — Log de récupération post-redémarrage
+
+### Contexte
+
+Après la réparation du daemon Docker Desktop (suppression du runtime NVIDIA du `daemon.json`), Docker Desktop a été redémarré. Les problèmes suivants ont été observés et résolus.
+
+---
+
+### WordPress (port XXXX)
+
+**Problème**: Le site WordPress sur le port XXXX ne répondait pas à 100% après le redémarrage de Docker Desktop. Certains plugins et thumbnails étaient manquants.
+
+**Remédiation**:
+- Redémarrer les conteneurs de base de données en premier (MariaDB, MySQL).
+- Puis redémarrer les conteneurs WordPress en séquence.
+- Plugins et thumbnails récupérés.
+Ré activation des plugins et vérification des onglets, donc, par exemple, pour notre Plugin MZERMARTS BackUp qu nous sert à automatiser les sauvegardes, et à les visualiser dans un explorateur interne à Wordpress, et à disposer d'un Etat de santé général des Backup est à nouveau opérationnel, n'a perdu aucun fichier de Backup, et nous remonte donc un état de SANTE VERT pour tous les indicateurs d'état !
+
+---
+
+### OpenWebUI & ComfyUI
+
+**Problème**: Les modèles étaient manquants après le redémarrage.
+
+**Remédiation**:
+- Redémarrer le conteneur OpenWebUI.
+- Redémarrer le conteneur ComfyUI.
+- Les modèles ont été rechargés et sont redevenus disponibles.
+
+Nos workflow 2D vers 3d par exemple sont entièrement opérationnels, modèles et même derniers fichiers, fichiers récents, en place !
+---
+
+### Observations générales
+
+- Tous les conteneurs sont revenus après la séquence de redémarrage.
+- Aucune perte de données.
+- Le fix a été un succès: la plateforme est entièrement opérationnelle.
+- L'approche était correcte: l'objectif était de rétablir le fonctionnement, et l'objectif a été atteint.
+
+J'ai envoyé le lien de ce REPO à Docker, j'espère qu'ils en feront bon usage !
+
+CORE dialement,
+MZERMA Amine.
