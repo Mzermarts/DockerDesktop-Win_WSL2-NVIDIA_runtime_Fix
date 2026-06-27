@@ -75,7 +75,7 @@ AI models were no longer listed after the Docker Desktop restart.
 
 ### 📬 Note to Docker Support
 
-The link to this repository was forwarded to Docker's support team in response to their ticket.
+The link to this repository was forwarded to Docker's support team in response to the answer they made to my ticket.
 It is shared in the hope that it proves useful to their teams and to the wider community.
 
 ---
@@ -157,7 +157,7 @@ Les modèles IA n'étaient plus listés après le redémarrage de Docker Desktop
 
 ### 📬 Note au support Docker
 
-Le lien vers ce dépôt a été transmis à l'équipe support de Docker en réponse à leur ticket.
+Le lien vers ce dépôt a été transmis à l'équipe support de Docker en réponse à leur proposition de remédiation suite à me demande de ticket SUPPORT.
 Il est partagé dans l'espoir qu'il soit utile à leurs équipes et à la communauté au sens large.
 
 ---
