@@ -202,4 +202,4 @@ Available services will include:
 
 ---
 
-*Document written and structured with the assistance of [Claude](https://claude.ai) (Anthropic) — June 2026.*
+*MZERMARTS copyright - June 2026.*
